@@ -1,0 +1,119 @@
+:root {
+  --bg: #f6f5fb;
+  --surface: #ffffff;
+  --surface-2: #f1effa;
+  --text: #1c1a2b;
+  --muted: #6b6785;
+  --border: #e6e2f2;
+  --primary: #6c4cf1;
+  --primary-strong: #5638d6;
+  --primary-soft: #ede8ff;
+  --on-primary: #ffffff;
+  --accent: #f59e0b;
+  --accent-soft: #fef3c7;
+  --success: #15803d;
+  --success-soft: #dcfce7;
+  --danger: #be123c;
+  --danger-soft: #ffe4e6;
+  --shadow: 0 24px 50px -30px rgba(48, 26, 120, 0.4);
+  --shadow-lg: 0 30px 70px -30px rgba(48, 26, 120, 0.45);
+  --sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --mono: "Cascadia Code", "Consolas", ui-monospace, monospace;
+
+  color-scheme: light;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme="dark"] {
+  --bg: #0f0e17;
+  --surface: #181625;
+  --surface-2: #221f33;
+  --text: #f2f0fb;
+  --muted: #a5a1bc;
+  --border: #2e2a44;
+  --primary: #8b73ff;
+  --primary-strong: #a491ff;
+  --primary-soft: #251f42;
+  --on-primary: #14101f;
+  --accent: #fbbf24;
+  --accent-soft: #33280d;
+  --success: #4ade80;
+  --success-soft: #10291b;
+  --danger: #fb7185;
+  --danger-soft: #331220;
+  --shadow: 0 24px 50px -30px rgba(0, 0, 0, 0.85);
+  --shadow-lg: 0 30px 70px -25px rgba(0, 0, 0, 0.9);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background-image:
+    radial-gradient(60rem 40rem at 12% -10%, rgba(108, 76, 241, 0.14), transparent 60%),
+    radial-gradient(50rem 35rem at 100% 0%, rgba(236, 72, 153, 0.1), transparent 55%);
+  background-attachment: fixed;
+}
+
+html[data-theme="dark"] body {
+  background-image:
+    radial-gradient(60rem 40rem at 10% -10%, rgba(139, 115, 255, 0.2), transparent 60%),
+    radial-gradient(50rem 35rem at 100% 0%, rgba(236, 72, 153, 0.12), transparent 55%);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--primary);
+}
+
+svg {
+  display: block;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 55%, transparent);
+  outline-offset: 2px;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
